@@ -12,7 +12,7 @@ function roboger(strInput) {
           continue;
         }
         if (i === 2) {
-          console.log(i + "");
+          console.log("Boop!");
           continue;
         }
         console.log(i);
