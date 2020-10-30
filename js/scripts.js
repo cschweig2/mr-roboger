@@ -16,7 +16,7 @@ function roboger(strInput) {
           continue;
         }
         if (i === 3) {
-          console.log(i + "");
+          console.log("Won't you be my neighbor?");
           continue;
         }
         console.log(i);
