@@ -15,6 +15,10 @@ function roboger(strInput) {
           console.log("Boop!");
           continue;
         }
+        if (i === 3) {
+          console.log(i + "");
+          continue;
+        }
         console.log(i);
       }
     } else {
