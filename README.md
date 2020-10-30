@@ -25,6 +25,40 @@ _This application takes a number from a user and returns a range of numbers from
 
 _There are no known bugs at this time._
 
+## Test Specs
+
+Describe: roboger();
+
+Test: "It returns a warning message if the user enters a letter."
+Expect(roboger("a")).toEqual("Please enter numbers only.");
+
+Test: "It converts the user's input to an integer from a string."
+Expect(roboger("23")).toEqual(23);
+
+Test: "It returns a warning message if the user enters a number outside of the range of 1-50."
+Expect(roboger(0)).toEqual("Please enter a number between 1 and 50.");
+
+Test: "It stores the user's input in a for loop"
+Expect(roboger(10)).toEqual(0,1,2,3,4,5,6,7,8,9,10);
+
+Test: "It replaces each instance of 1 with the word "Beep!"
+Expect(roboger(5)).toEqual(0,"Beep!",2,3,4,5);
+
+Test: "It replaces each instance of 2 with the word "Boop!"
+Expect(roboger(5)).toEqual(0,"Beep!","Boop!",3,4,5);
+
+Test: "It replaces each instance of 3 with the words "Won't you be my neighbor?"
+Expect(roboger(5)).toEqual(0,"Beep!","Boop!","Won't you be my neighbor?",4,5)
+
+Test: "It replaces all numbers with "Beep!" if the user enters a number starting with a 1 or ending with a 1, except when starting or ending with a 2 or 3."
+Expect(roboger(15)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,"Beep!");
+
+Test: "It replaces all numbers with "Boop!" if the user enters a number starting with a 2 or ending with a 2, except when starting or ending with a 3."
+Expect(roboger(12)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,"Boop!")
+
+Test: "It replaces all numbers with "Won't you be my neighbor?" if the user enters a number starting or ending with a 3."
+Expect(roboger(13)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,12,"Won't you be my neighbor?");
+
 ## Support and contact details
 
 _If you run into any issues, you can contact the creator at cschweig2@gmail.com, or make contributions to the code on GitHub via forking and creating a new branch._
