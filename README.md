@@ -41,6 +41,9 @@ Expect(roboger(0)).toEqual("Please enter a number between 1 and 50.");
 Test: "It stores the user's input in a for loop"
 Expect(roboger(10)).toEqual(0,1,2,3,4,5,6,7,8,9,10);
 
+Test: "It converts the number 1 back to a string"
+Expect(roboger(1)).toEqual(0,"1");
+
 Test: "It replaces each instance of 1 with the word "Beep!"
 Expect(roboger(5)).toEqual(0,"Beep!",2,3,4,5);
 

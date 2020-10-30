@@ -7,6 +7,10 @@ function roboger(strInput) {
     if (numInput > 1 && numInput <= 50) {
       //continue
       for (let i = 0; i <= numInput; i++) {
+        if (i === 1) {
+          console.log(i + "");
+          continue;
+        }
         console.log(i);
       }
     } else {
