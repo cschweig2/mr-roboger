@@ -2,6 +2,7 @@
 function roboger(strInput) {
   $("#warningLetters").hide();
   $("#warningNumbers").hide();
+  $("outputOverForty").hide();
   $("#output").empty();
   let numDetect = /[0-9]/;
   const resultArray = [];
@@ -26,6 +27,9 @@ function roboger(strInput) {
       resultArray.forEach(function(element) {
         $("#output").append(element + '<br>');
       });
+      if (numInput > 45) {
+        $("#outputOverForty").show("Whew, that was a lot!");
+      }
     } else {
       $("#warningNumbers").show();
       return;
@@ -42,8 +46,7 @@ $(document).ready(function() {
   $("form#roboger").submit(function(event) {
     event.preventDefault();
     const strInput = $("input#strInput").val();
-
     $("#output").append(roboger(strInput));
-    $("#output").show();
+    $("#output").slideDown("slow");
   });
 });
