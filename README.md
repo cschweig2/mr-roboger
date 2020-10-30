@@ -6,7 +6,7 @@
 
 ## Description
 
-_This application takes a number from a user and returns a range of numbers from 0 to the user's inputted number, unless the user's inputted number contains a 1, 2, or 3. In that case, the application will replace all 1's with "Beep!", it will replace all 2's with "Boop!", and it will replace all 3's with "Won't you be my neighbor?"_
+_This application takes a number from a user and returns a range of numbers from 0 up to the user's inputted number. The application will replace all 1's or numbers containing 1's with "Beep!", replace all 2's and numbers containing 2's with "Boop!", and it will replace all 3's and numbers containing 3's with "Won't you be my neighbor?", in order of priority. Numbers containing 3's receive top priority, followed by 2's, then 1's._
 
 ## Setup/Installation Requirements
 ### View Online
