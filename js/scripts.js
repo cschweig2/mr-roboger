@@ -11,9 +11,12 @@ function roboger(strInput) {
           console.log("Won't you be my neighbor?");
           continue;
         }
+        if (i === 2 || i % 10 === 2 || (i >= 20 && i < 30)) {
+          console.log("Boop!")
+          continue;
+        }
         console.log(i);
       }
-      console.log(33 % 100);
     } else {
       console.log("Please enter only numbers from 1 to 50");
       return;
