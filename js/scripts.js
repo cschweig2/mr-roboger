@@ -2,8 +2,10 @@
 function roboger(strInput) {
   $("#warningLetters").hide();
   $("#warningNumbers").hide();
-  $("outputOverForty").hide();
+  $("#outputOverForty").hide();
+  $("#startText").hide();
   $("#output").empty();
+  $("#startText").show();
   let numDetect = /[0-9]/;
   const resultArray = [];
   if (strInput.match(numDetect)) {

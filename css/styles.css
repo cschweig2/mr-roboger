@@ -12,6 +12,7 @@ body {
   text-align: center;
   background-color: rgb(235, 235, 235);
   padding: 50px;
+  font-family: monospace;
 }
 
 img {
@@ -28,9 +29,14 @@ h4 {
 form {
   margin-bottom: 50px;
 }
+
 p {
   color: red;
   font-style: bold;
+}
+
+#startText {
+  display: none;
 }
 
 #warningLetters {
@@ -52,4 +58,5 @@ p {
 footer {
   text-align: center;
   font-weight: bold;
+  margin-top: 20px;
 }
