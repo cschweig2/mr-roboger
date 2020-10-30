@@ -43,9 +43,7 @@ $(document).ready(function() {
     event.preventDefault();
     const strInput = $("input#strInput").val();
 
-   
     $("#output").append(roboger(strInput));
     $("#output").show();
-    
   });
 });

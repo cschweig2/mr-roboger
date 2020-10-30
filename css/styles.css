@@ -1,8 +1,17 @@
+.jumbotron {
+  font-family: monospace;
+  font-size: 500%;
+}
+
+body {
+  background-color: rgb(207, 207, 207);
+}
+
 footer {
   text-align: center;
 }
 
-.jumbotron {
+.container {
   text-align: center;
 }
 
@@ -17,5 +26,12 @@ p {
 
 #warningNumbers {
   display: none;
+}
+
+img {
+  height: 300px;
+  width: 350px;
+  margin: 20px;
+  border-radius: 20px;
 }
 
