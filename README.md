@@ -31,7 +31,7 @@ _There are no known bugs at this time._
 Describe: roboger();
 
 Test: "It returns a warning message if the user enters a letter."<br>
-Expect(roboger("a")).toEqual("Please enter numbers only.");<br>
+Expect(roboger("a")).toEqual("Please enter numbers only.");
 
 Test: "It converts the user's input to an integer from a string."<br>
 Expect(roboger("23")).toEqual(23);
@@ -60,16 +60,16 @@ Expect(roboger(3)).toEqual(0,"1","2","3");
 Test: "It replaces each instance of 3 with the words 'Won't you be my neighbor?'"<br>
 Expect(roboger(5)).toEqual(0,"Beep!","Boop!","Won't you be my neighbor?",4,5)
 
-Test: "It replaces all numbers with 'Won't you be my neighbor?' for numbers starting or ending with a 3."
+Test: "It replaces all numbers with 'Won't you be my neighbor?' for numbers starting or ending with a 3."<br>
 Expect(roboger(13)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,12,"Won't you be my neighbor?");
 
-Test: "It replaces all numbers with 'Boop!' for numbers starting with a 2 or ending with a 2, except when starting or ending with a 3."
+Test: "It replaces all numbers with 'Boop!' for numbers starting with a 2 or ending with a 2, except when starting or ending with a 3."<br>
 Expect(roboger(12)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,"Boop!")
 
-Test: "It replaces all numbers with 'Beep!' for numbers starting with a 1 or ending with a 1, except when starting or ending with a 2 or 3."
+Test: "It replaces all numbers with 'Beep!' for numbers starting with a 1 or ending with a 1, except when starting or ending with a 2 or 3."<br>
 Expect(roboger(15)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,"Beep!");
 
-Test: "If the user's number is greater than 45, Mr. Roboger will say 'Whew, that was a lot!'"
+Test: "If the user's number is greater than 45, Mr. Roboger will say 'Whew, that was a lot!'"<br>
 Expect(roboger(46)).toEqual("Whew, that was a lot!");
 
 ## Support and contact details
