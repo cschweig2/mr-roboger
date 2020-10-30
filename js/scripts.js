@@ -12,7 +12,11 @@ function roboger(strInput) {
           continue;
         }
         if (i === 2 || i % 10 === 2 || (i >= 20 && i < 30)) {
-          console.log("Boop!")
+          console.log("Boop!");
+          continue;
+        }
+        if (i === 1 || i % 10 === 1 || (i >= 10 && i < 20)) {
+          console.log("Beep!");
           continue;
         }
         console.log(i);
