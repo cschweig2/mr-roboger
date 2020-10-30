@@ -1,35 +1,51 @@
 //  business logic
 function roboger(strInput) {
+  $("#warningLetters").hide();
+  $("#warningNumbers").hide();
+  $("#output").empty();
   let numDetect = /[0-9]/;
+  const resultArray = [];
   if (strInput.match(numDetect)) {
-    //continue
     let numInput = parseInt(strInput);
-    if (numInput > 1 && numInput <= 50) {
-      //continue
+    if (numInput >= 1 && numInput <= 50) {
       for (let i = 0; i <= numInput; i++) {
         if (i === 3 || i % 10 === 3 || (i >= 30 && i < 40)) {
-          console.log("Won't you be my neighbor?");
+          resultArray.push("Won't you be my neighbor?");
           continue;
         }
         if (i === 2 || i % 10 === 2 || (i >= 20 && i < 30)) {
-          console.log("Boop!");
+          resultArray.push("Boop!");
           continue;
         }
         if (i === 1 || i % 10 === 1 || (i >= 10 && i < 20)) {
-          console.log("Beep!");
+          resultArray.push("Beep!");
           continue;
         }
-        console.log(i);
+        resultArray.push(i);
       }
+      resultArray.forEach(function(element) {
+        $("#output").append(element + '<br>');
+      });
     } else {
-      console.log("Please enter only numbers from 1 to 50");
+      $("#warningNumbers").show();
       return;
     }
   } else {
-    console.log("Please enter only numbers");
+    $("#warningLetters").show();
     return;
   }
 }
 
-
 // UI logic
+
+$(document).ready(function() {
+  $("form#roboger").submit(function(event) {
+    event.preventDefault();
+    const strInput = $("input#strInput").val();
+
+   
+    $("#output").append(roboger(strInput));
+    $("#output").show();
+    
+  });
+});

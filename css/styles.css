@@ -1,0 +1,21 @@
+footer {
+  text-align: center;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+p {
+  color: red;
+  font-style: bold;
+}
+
+#warningLetters {
+  display: none;
+}
+
+#warningNumbers {
+  display: none;
+}
+
