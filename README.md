@@ -47,8 +47,14 @@ Expect(roboger(1)).toEqual(0,"1");
 Test: "It replaces each instance of 1 with the word "Beep!"
 Expect(roboger(5)).toEqual(0,"Beep!",2,3,4,5);
 
+Test: It converts the number 2 back to a string"
+Expect(roboger(2)).toEqual(0,"1","2");
+
 Test: "It replaces each instance of 2 with the word "Boop!"
 Expect(roboger(5)).toEqual(0,"Beep!","Boop!",3,4,5);
+
+Test: "It converts the number 3 back to a string"
+Expect(roboger(3)).toEqual(0,"1","2","3");
 
 Test: "It replaces each instance of 3 with the words "Won't you be my neighbor?"
 Expect(roboger(5)).toEqual(0,"Beep!","Boop!","Won't you be my neighbor?",4,5)

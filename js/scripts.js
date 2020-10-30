@@ -8,9 +8,13 @@ function roboger(strInput) {
       //continue
       for (let i = 0; i <= numInput; i++) {
         if (i === 1) {
-          console.log(i + "");
+          console.log("Beep!");
           continue;
         }
+        // if (i === 2) {
+        //   console.log(i + "");
+        //   continue;
+        // }
         console.log(i);
       }
     } else {
