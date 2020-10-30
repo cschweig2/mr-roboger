@@ -59,14 +59,14 @@ Expect(roboger(3)).toEqual(0,"1","2","3");
 Test: "It replaces each instance of 3 with the words "Won't you be my neighbor?"
 Expect(roboger(5)).toEqual(0,"Beep!","Boop!","Won't you be my neighbor?",4,5)
 
-Test: "It replaces all numbers with "Beep!" if the user enters a number starting with a 1 or ending with a 1, except when starting or ending with a 2 or 3."
-Expect(roboger(15)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,"Beep!");
+Test: "It replaces all numbers with "Won't you be my neighbor?" for numbers starting or ending with a 3."
+Expect(roboger(13)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,12,"Won't you be my neighbor?");
 
-Test: "It replaces all numbers with "Boop!" if the user enters a number starting with a 2 or ending with a 2, except when starting or ending with a 3."
+Test: "It replaces all numbers with "Boop!" for numbers starting with a 2 or ending with a 2, except when starting or ending with a 3."
 Expect(roboger(12)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,"Boop!")
 
-Test: "It replaces all numbers with "Won't you be my neighbor?" if the user enters a number starting or ending with a 3."
-Expect(roboger(13)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,12,"Won't you be my neighbor?");
+Test: "It replaces all numbers with "Beep!" for numbers starting with a 1 or ending with a 1, except when starting or ending with a 2 or 3."
+Expect(roboger(15)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,"Beep!");
 
 ## Support and contact details
 
