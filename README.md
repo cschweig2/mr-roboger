@@ -70,7 +70,7 @@ Test: "It replaces all numbers with 'Beep!' for numbers starting with a 1 or end
 Expect(roboger(15)).toEqual(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,"Beep!");
 
 Test: "If the user's number is greater than 45, Mr. Roboger will say 'Whew, that was a lot!'"
-Expect(roboger(46)).toEqual("Whew, that was a lot!")
+Expect(roboger(46)).toEqual("Whew, that was a lot!");
 
 ## Support and contact details
 
