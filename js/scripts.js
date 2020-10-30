@@ -11,10 +11,10 @@ function roboger(strInput) {
           console.log("Beep!");
           continue;
         }
-        // if (i === 2) {
-        //   console.log(i + "");
-        //   continue;
-        // }
+        if (i === 2) {
+          console.log(i + "");
+          continue;
+        }
         console.log(i);
       }
     } else {
