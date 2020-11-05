@@ -1,54 +1,70 @@
-//  business logic
+//  Business Logic -----------
+
+let warningLetters = false;
+let warningNumbers = false;
+let outputOverForty = false;
+
 function roboger(strInput) {
-  $("#warningLetters").hide();
-  $("#warningNumbers").hide();
-  $("#outputOverForty").hide();
-  $("#startText").hide();
-  $("#output").empty();
-  $("#startText").show();
   let numDetect = /[0-9]/;
+  let strMatch1 = /[1]/;
+  let strMatch2 = /[2]/;
+  let strMatch3 = /[3]/;
   const resultArray = [];
   if (strInput.match(numDetect)) {
     let numInput = parseInt(strInput);
-    if (numInput >= 1 && numInput <= 50) {
+    if (numInput >= 1) {
       for (let i = 0; i <= numInput; i++) {
-        if (i === 3 || i % 10 === 3 || (i >= 30 && i < 40)) {
+        let index = i.toString();
+        if (index.match(strMatch3)) {
           resultArray.push("Won't you be my neighbor?");
           continue;
         }
-        if (i === 2 || i % 10 === 2 || (i >= 20 && i < 30)) {
+        if (index.match(strMatch2)) {
           resultArray.push("Boop!");
           continue;
         }
-        if (i === 1 || i % 10 === 1 || (i >= 10 && i < 20)) {
+        if (index.match(strMatch1)) {
           resultArray.push("Beep!");
           continue;
         }
         resultArray.push(i);
       }
-      resultArray.forEach(function(element) {
-        $("#output").append(element + '<br>');
-      });
+      result(resultArray);
       if (numInput > 45) {
-        $("#outputOverForty").show("Whew, that was a lot!");
+        outputOverForty = true;
       }
     } else {
-      $("#warningNumbers").show();
-      return;
+      warningNumbers = true;
     }
   } else {
-    $("#warningLetters").show();
-    return;
+    warningLetters = true;
   }
 }
 
-// UI logic
+// UI Logic ---------------
+
+function result(resultArray) {
+  resultArray.forEach(function(element) {
+    $("#output").append(element + '<br>');
+  });
+}
 
 $(document).ready(function() {
   $("form#roboger").submit(function(event) {
     event.preventDefault();
+    $("#warningLetters, #warningNumbers, #outputOverForty, #startText").hide();
+    $("#output").empty();
+    $("#startText").show();
     const strInput = $("input#strInput").val();
-    $("#output").append(roboger(strInput));
+    roboger(strInput);
+    if (warningLetters === true) {
+      $("#warningLetters").toggle();
+    } 
+    if (warningNumbers === true) {
+      $("#warningNumbers").toggle();
+    }
+    warningLetters = false;
+    warningNumbers = false;
     $("#output").slideDown("slow");
   });
 });
