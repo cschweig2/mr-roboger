@@ -63,8 +63,12 @@ $(document).ready(function() {
     if (warningNumbers === true) {
       $("#warningNumbers").toggle();
     }
+    if (outputOverForty === true) {
+      $("#outputOverForty").toggle();
+    }
     warningLetters = false;
     warningNumbers = false;
+    outputOverForty = false;
     $("#output").slideDown("slow");
   });
 });
